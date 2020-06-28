@@ -20,7 +20,7 @@ class CurrencyInput extends React.Component {
   render() {
     return(
       <span className={"CurrencyInput " + this.props.className}>
-        {this.props.currencySymbol}<input value = {this.formatToDecimal(this.props.value)} type="number" name={this.props.name} size={this.props.size} onChange={this.onChange}/>
+        {this.props.currencySymbol}<input value = {this.formatToDecimal(this.props.value)} type="number" name={this.props.name} size={this.props.size} onChange={this.onChange} step={1 * 10**-this.props.decimalPlaces}/>
       </span>
     );
   }
